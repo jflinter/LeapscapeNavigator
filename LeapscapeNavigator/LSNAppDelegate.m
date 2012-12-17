@@ -15,4 +15,11 @@
     // Insert code here to initialize your application
 }
 
+- (void) awakeFromNib {
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    _statusItem.menu = _statusMenu;
+    _statusItem.title = @"Leap";
+    _statusItem.highlightMode = YES;
+}
+
 @end

@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface LSNAppDelegate : NSObject <NSApplicationDelegate>
+@interface LSNAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate> {
+    NSStatusItem *_statusItem;
+}
 
-@property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, strong) IBOutlet NSMenu *statusMenu;
 
 @end
